@@ -1,0 +1,15 @@
+{
+	"id": "uview-ui",
+	"scripts": {
+		"test": "eslint . --fix"
+	},
+	"dependencies": {
+		"moment": "^2.29.4"
+	},
+	"devDependencies": {
+		"eslint": "^8.2.0",
+		"eslint-config-airbnb": "^19.0.0",
+		"node-sass": "^7.0.1",
+		"sass-loader": "^10.2.1"
+	}
+}

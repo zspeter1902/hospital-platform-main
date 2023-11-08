@@ -1,0 +1,137 @@
+{
+	// 如果您是通过uni_modules形式引入uView，可以忽略此配置
+	"easycom": {
+		"^u-(.*)": "@/components/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/mainPage/mainPage",
+			"style": {
+				"navigationBarTitleText": "主页",
+				"navigationStyle": "default" ,
+				"navigationBarTextStyle": "white" ,
+				"navigationBarBackgroundColor": "#007AFF",
+				"enablePullDownRefresh": true,
+				"scrollIndicator":"none"
+			}
+		},
+		{
+			"path": "pages/member/memberPage",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom" ,
+				"navigationBarTextStyle": "white" ,
+				"navigationBarBackgroundColor": "#0099ff" 
+			}
+		},
+		{
+			"path": "pages/member/setUserData",
+			"style": {
+				"navigationBarTitleText": "修改个人信息",
+				"navigationStyle": "default" ,
+				"navigationBarTextStyle": "white" ,
+				"navigationBarBackgroundColor": "#007AFF" 
+			}
+		}
+	],
+	"subPackages": [
+		{
+		    "root":"pages-auth",
+		    "pages":[
+		        {
+		            "path":"loginPage",
+		            "style":{
+		                "navigationBarTitleText": "登录",
+		                "navigationStyle": "default" ,
+		                "navigationBarTextStyle": "white" ,
+		                "navigationBarBackgroundColor": "#007AFF" 
+		            }
+		        },
+				{
+				    "path":"accountLoginPage",
+				    "style":{
+				        "navigationBarTitleText": "账户登录",
+				        "navigationStyle": "default" ,
+				        "navigationBarTextStyle": "white" ,
+				        "navigationBarBackgroundColor": "#007AFF" 
+				    }
+				},
+				{
+				    "path":"regPage",
+				    "style":{
+				        "navigationBarTitleText": "用户注册",
+				        "navigationStyle": "default" ,
+				        "navigationBarTextStyle": "white" ,
+				        "navigationBarBackgroundColor": "#007AFF" 
+				    }
+				}
+		    ]
+		},
+		{
+		    "root":"pages-common",
+		    "pages":[
+		        {
+		            "path":"aboutUs",
+		            "style":{
+		                "navigationBarTitleText": "关于我们",
+		                "navigationStyle": "default" ,
+		                "navigationBarTextStyle": "white" ,
+		                "navigationBarBackgroundColor": "#007AFF" 
+		            }
+		        },
+				{
+				    "path":"paySuccessPage",
+				    "style":{
+				        "navigationBarTitleText": "支付成功",
+				        "navigationStyle": "default" ,
+				        "navigationBarTextStyle": "white" ,
+				        "navigationBarBackgroundColor": "#007AFF" 
+				    }
+				},
+				{
+				    "path":"orderDataPage",
+				    "style":{
+				        "navigationBarTitleText": "订单详情",
+				        "navigationStyle": "default" ,
+				        "navigationBarTextStyle": "white" ,
+				        "navigationBarBackgroundColor": "#007AFF" 
+				    }
+				}
+		    ]
+		}
+	],
+	//预加载规则
+	"preloadRule": {
+		// "pages/example/components": {
+		// 	"network": "all",
+		// 	"packages": ["pages/componentsA", "pages/componentsB"]
+		// }
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "主页",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"scrollIndicator":"none"
+	},
+	"tabBar": {
+		"color":"#909399",
+		"selectedColor":"#303133",
+		"borderStyle":"black",
+		"backgroundColor":"#ffffff",
+		"list":[
+			{
+				"pagePath":"pages/mainPage/mainPage",
+				"iconPath":"static/tabbar/mainPage.png",
+				"selectedIconPath":"static/tabbar/mainPage-on.png",
+				"text":"主页"
+			},
+			{
+				"pagePath":"pages/member/memberPage",
+				"iconPath":"static/tabbar/member-center.png",
+				"selectedIconPath":"static/tabbar/member-center-on.png",
+				"text":"个人中心"
+			}
+		]
+	}
+}
